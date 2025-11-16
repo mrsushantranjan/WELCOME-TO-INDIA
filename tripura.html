@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripura - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #800000);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #800000;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #800000;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #800000;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #800000;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #5C5C5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 25px;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Neermahal_-_Palace_in_the_water.jpg/1280px-Neermahal_-_Palace_in_the_water.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Tripura</h1>
+  <p>The Land of Palaces, Temples, and Rich Tribal Culture</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+  <a href="gujarat.html">Gujarat</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Hidden Gem of Northeast India</h2>
+      <p>From magnificent palaces to ancient temples and vibrant tribal culture, Tripura offers unique experiences.</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Tripura</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Neermahal_-_Palace_in_the_water.jpg/500px-Neermahal_-_Palace_in_the_water.jpg" alt="Neermahal Palace">
+      <div class="card-content">
+        <h3>Neermahal Palace</h3>
+        <p>Magnificent water palace located in the middle of Rudrasagar Lake.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ujjayanta_Palace_%28Tripura%29.jpg/500px-Ujjayanta_Palace_%28Tripura%29.jpg" alt="Ujjayanta Palace">
+      <div class="card-content">
+        <h3>Ujjayanta Palace</h3>
+        <p>Former royal palace of Tripura, now a state museum.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tripura_Sundari_Temple.jpg/500px-Tripura_Sundari_Temple.jpg" alt="Tripura Sundari Temple">
+      <div class="card-content">
+        <h3>Tripura Sundari Temple</h3>
+        <p>One of the 51 Shakti Peethas, dedicated to Goddess Kali.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Unakoti_Shiva_Head.jpg/500px-Unakoti_Shiva_Head.jpg" alt="Unakoti">
+      <div class="card-content">
+        <h3>Unakoti</h3>
+        <p>Ancient Shaivite pilgrimage site with massive rock carvings.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Jampui_Hills.jpg/500px-Jampui_Hills.jpg" alt="Jampui Hills">
+      <div class="card-content">
+        <h3>Jampui Hills</h3>
+        <p>Beautiful hill range offering panoramic views and orange gardens.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bhuvaneswari_Temple%2C_Tripura.jpg/500px-Bhuvaneswari_Temple%2C_Tripura.jpg" alt="Bhuvaneswari Temple">
+      <div class="card-content">
+        <h3>Bhuvaneswari Temple</h3>
+        <p>Ancient temple on the banks of River Gomati.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Sepahijala_Wildlife_Sanctuary.jpg/500px-Sepahijala_Wildlife_Sanctuary.jpg" alt="Sepahijala Wildlife Sanctuary">
+      <div class="card-content">
+        <h3>Sepahijala Wildlife Sanctuary</h3>
+        <p>Home to diverse flora and fauna including spectacled monkeys.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Dumboor_Lake.jpg/500px-Dumboor_Lake.jpg" alt="Dumboor Lake">
+      <div class="card-content">
+        <h3>Dumboor Lake</h3>
+        <p>Picturesque lake with 48 islands, shaped like a drum.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mata_Tripureshwari_Temple.jpg/500px-Mata_Tripureshwari_Temple.jpg" alt="Mata Tripureshwari Temple">
+      <div class="card-content">
+        <h3>Mata Tripureshwari Temple</h3>
+        <p>Important Hindu temple dedicated to Goddess Tripura Sundari.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Gunabati_Group_of_Temples.jpg/500px-Gunabati_Group_of_Temples.jpg" alt="Gunabati Group of Temples">
+      <div class="card-content">
+        <h3>Gunabati Group of Temples</h3>
+        <p>Historic temple complex showcasing Tripura's architectural heritage.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rowa_Wildlife_Sanctuary.jpg/500px-Rowa_Wildlife_Sanctuary.jpg" alt="Rowa Wildlife Sanctuary">
+      <div class="card-content">
+        <h3>Rowa Wildlife Sanctuary</h3>
+        <p>Small but significant wildlife sanctuary with diverse species.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Agartala_City_View.jpg/500px-Agartala_City_View.jpg" alt="Agartala">
+      <div class="card-content">
+        <h3>Agartala</h3>
+        <p>Capital city with rich cultural heritage and modern amenities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Tripura</h2>
+  <p>Tripura has a rich cultural heritage with diverse tribal communities, traditional dances like Hojagiri and Garia, colorful festivals like Kharchi Puja and Ker Puja, and unique handicrafts including bamboo and cane products.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Tripura weddings are vibrant celebrations that blend Hindu rituals with tribal traditions, featuring colorful traditional attire, folk music, and elaborate feasts with local delicacies.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Rice</li>
+    <li>Jute</li>
+    <li>Sugarcane</li>
+    <li>Tea</li>
+    <li>Pineapple</li>
+    <li>Orange</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Tripura Tourism Project</p>
+  <p>Designed with ❤️ for culture lovers</p>
+</footer>
+
+</body>
+</html>

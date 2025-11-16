@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telangana - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #138808);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #138808;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #138808;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #138808;
+      background-color: #f0f0f0;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #138808;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #5C5C5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 25px;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://images.unsplash.com/photo-1595599512946-4c0f3032b4e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+    .image-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      background-color: #e9e9e9;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Telangana</h1>
+  <p>The Land of temples, festivals and lakes</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+  <a href="goa.html">Goa</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Heritage & Innovation of Telangana</h2>
+      <p>From historic forts to modern IT hubs, Telangana blends tradition with progress.</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Telangana</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Charminar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Charminar</div>
+      <div class="card-content"><h3>Charminar</h3><p>Iconic monument and mosque in Hyderabad, built in 1591.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://indiator.com/tourist-places/wp-content/uploads/2017/01/Golconda-Fort-Hyderabad.jpg" alt="Golconda Fort" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Golconda Fort</div>
+      <div class="card-content"><h3>Golconda Fort</h3><p>Majestic fort known for its acoustic system and diamond mines.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://blog.ramojifilmcity.com/rfcblog_cms/uploads/1752725672_Bahubali%20Set%20-%20Best%20Film%20Design%20and%20expert%20set%20designers%20in%20Hyderabad%20Ramoji%20film%20city.jpg" alt="Ramoji Film City" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Ramoji Film City</div>
+      <div class="card-content"><h3>Ramoji Film City</h3><p>World's largest integrated film city spread over 2000 acres.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://ldcars.blr1.cdn.digitaloceanspaces.com/ldcars_nextjs_images/blog_images/LDC-1752156016452-BLOG_PICTURES_%2811%29.webp" alt="Bhadrachalam Temple" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Bhadrachalam Temple</div>
+      <div class="card-content"><h3>Bhadrachalam Temple</h3><p>Famous Hindu temple dedicated to Lord Rama.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.viacation.com/_next/image?url=https%3A%2F%2Fwp.viacation.com%2Fwp-content%2Fuploads%2F2025%2F03%2Fbirla-temple-from-outside.webp&w=1920&q=75" alt="Birla Mandir" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Birla Mandir</div>
+      <div class="card-content"><h3>Birla Mandir</h3><p>Stunning white marble temple overlooking Hussain Sagar Lake.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://i0.wp.com/weekendyaari.in/wp-content/uploads/2025/09/Warangal-Fort-scaled.webp?fit=2560%2C1705&ssl=1" alt="Warangal Fort" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Warangal Fort</div>
+      <div class="card-content"><h3>Warangal Fort</h3><p>Historical fort known for its architectural grandeur.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://shop.museumsofindia.org/sites/default/files/2020-04/hyderabad-salarjung-museum.jpg" alt="Salar Jung Museum" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Salar Jung Museum</div>
+      <div class="card-content"><h3>Salar Jung Museum</h3><p>One of India's three National Museums with rare art collections.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://s3.ap-south-1.amazonaws.com/media.thesouthfirst.com/wp-content/uploads/2025/07/Nagarjuna_Sagar.jpg" alt="Nagarjuna Sagar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Nagarjuna Sagar</div>
+      <div class="card-content"><h3>Nagarjuna Sagar</h3><p>Massive dam and Buddhist heritage site on Krishna River.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/1000pillar_temple_warangal.jpg/1200px-1000pillar_temple_warangal.jpg" alt="Thousand Pillar Temple" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Thousand Pillar Temple</div>
+      <div class="card-content"><h3>Thousand Pillar Temple</h3><p>Historic temple known for its exquisite architecture.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://map.sahapedia.org/admin/assets/images/2022051915462452Hussain_Sagar_DK.jpg?__imr__=bannerArticle" alt="Hussain Sagar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Hussain Sagar</div>
+      <div class="card-content"><h3>Hussain Sagar</h3><p>Heart-shaped lake with a massive Buddha statue in the center.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://www.trawell.in/admin/images/upload/861648478Basara_Temple_Main.jpg" alt="Basara Temple" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Basara Temple</div>
+      <div class="card-content"><h3>Basara Temple</h3><p>Famous temple dedicated to Goddess Saraswati.</p></div>
+    </div>
+    
+    <div class="card">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/c0/b6/17/the-panaroma-ciew.jpg?w=900&h=500&s=1" alt="Pakhal Lake" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="image-fallback" style="display:none;">Image of Pakhal Lake</div>
+      <div class="card-content"><h3>Pakhal Lake</h3><p>Picturesque artificial lake surrounded by lush forests.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Telangana</h2>
+  <p>Telangana has a rich cultural heritage with unique art forms like Bathukamma, Perini dance, and distinctive cuisine including Hyderabadi Biryani. The state celebrates festivals with great enthusiasm, blending Hindu and Muslim traditions in a unique way.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Telangana weddings are vibrant celebrations with traditional rituals, colorful attire, and elaborate feasts featuring authentic Telangana cuisine. The ceremonies often include Pellikuthuru (bride's reception), Mangala Snanam (holy bath), and Kashi Yatra rituals.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Rice</li>
+    <li>Cotton</li>
+    <li>Maize</li>
+    <li>Turmeric</li>
+    <li>Sugarcane</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Telangana Tourism Project</p>
+  <p>Designed with ❤️ for culture enthusiasts</p>
+</footer>
+
+<script>
+  // JavaScript to handle any image loading issues
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.card img');
+    
+    images.forEach(img => {
+      // Check if image loaded successfully
+      if (img.complete && img.naturalHeight === 0) {
+        img.style.display = 'none';
+        const fallback = img.nextElementSibling;
+        if (fallback && fallback.classList.contains('image-fallback')) {
+          fallback.style.display = 'flex';
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

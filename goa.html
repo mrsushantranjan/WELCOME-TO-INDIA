@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goa - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #800000);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #800000;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #800000;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #800000;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #800000;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #5C5C5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 25px;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Baga_Beach_Goa.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Goa</h1>
+  <p>The Pearl of the Orient, Beaches and Heritage</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Beaches & Heritage of Goa</h2>
+      <p>From vibrant beaches to historic churches, Goa is where culture meets the sea.</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Goa</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Baga_Beach%2C_Calangute%2C_Goa.jpg/500px-Baga_Beach%2C_Calangute%2C_Goa.jpg" alt="Baga Beach"><div class="card-content"><h3>Baga Beach</h3><p>One of the most popular beaches for nightlife and water sports.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Front_Elevation_of_Basilica_of_Bom_Jesus.jpg/960px-Front_Elevation_of_Basilica_of_Bom_Jesus.jpg" alt="Basilica of Bom Jesus"><div class="card-content"><h3>Basilica of Bom Jesus</h3><p>UNESCO World Heritage site, famous for Baroque architecture.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Fort_aguada.jpg/500px-Fort_aguada.jpg" alt="Fort Aguada"><div class="card-content"><h3>Fort Aguada</h3><p>Seventeenth-century Portuguese fort with sea views.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Doodhsagar_Fall.jpg/500px-Doodhsagar_Fall.jpg" alt="Dudhsagar Falls"><div class="card-content"><h3>Dudhsagar Falls</h3><p>Magnificent four-tiered waterfall on the Mandovi River.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Sunset_at_Calangute.jpg/500px-Sunset_at_Calangute.jpg" alt="Calangute Beach"><div class="card-content"><h3>Calangute Beach</h3><p>Known as the 'Queen of Beaches' in Goa.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Se_Cathedral_from_Rua_Direita.jpg/500px-Se_Cathedral_from_Rua_Direita.jpg" alt="Se Cathedral"><div class="card-content"><h3>Se Cathedral</h3><p>One of the largest churches in Asia.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Anjuna_Beach%2C_Goa%2C_India%2C_Legendary_Curlies_beach_shack.jpg/500px-Anjuna_Beach%2C_Goa%2C_India%2C_Legendary_Curlies_beach_shack.jpg" alt="Anjuna Beach"><div class="card-content"><h3>Anjuna Beach</h3><p>Famous for its trance parties and flea markets.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Fort_Chapora_26012016.jpg/960px-Fort_Chapora_26012016.jpg" alt="Chapora Fort"><div class="card-content"><h3>Chapora Fort</h3><p>Iconic fort with panoramic views of Vagator Beach.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Shri-Mangesh-Temple%2CGoa.JPG/500px-Shri-Mangesh-Temple%2CGoa.JPG" alt="Mangeshi Temple"><div class="card-content"><h3>Mangeshi Temple</h3><p>Famous Hindu temple dedicated to Lord Shiva.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/India_Landscape.jpg/500px-India_Landscape.jpg" alt="Colva Beach"><div class="card-content"><h3>Colva Beach</h3><p>Longest beach in South Goa, known for white sand.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Shantadurga_temple.jpg/500px-Shantadurga_temple.jpg" alt="Shanta Durga Temple"><div class="card-content"><h3>Shanta Durga Temple</h3><p>Important Hindu pilgrimage site in Goa.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Palolem_Beach%2C_South_Goa.jpg/500px-Palolem_Beach%2C_South_Goa.jpg" alt="Palolem Beach"><div class="card-content"><h3>Palolem Beach</h3><p>Picturesque beach with calm waters and palm trees.</p></div></div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Goa</h2>
+  <p>Goa has a unique blend of Indian and Portuguese cultures with festivals like Carnival, traditional dances, and delicious seafood cuisine.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Goan weddings are lively, often held by the beach with music, dancing, and a mix of Christian and Hindu traditions.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Coconut</li>
+    <li>Paddy (Rice)</li>
+    <li>Cashew</li>
+    <li>Spices</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Goa Tourism Project</p>
+  <p>Designed with ❤️ for culture enthusiasts</p>
+</footer>
+
+</body>
+</html>

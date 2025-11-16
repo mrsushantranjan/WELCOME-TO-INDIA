@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Uttar Pradesh - Explore India</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f7f5;
+        color: #333;
+    }
+    header {
+        background: linear-gradient(90deg, #5C5C5C, #800000);
+        color: white;
+        padding: 25px 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+        margin: 10px 0 0;
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    nav {
+        background-color: #800000;
+        display: flex;
+        justify-content: center;
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #FFDAB9;
+    }
+    section {
+        padding: 25px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    h2 {
+        color: #800000;
+        border-bottom: 3px solid #5C5C5C;
+        padding-bottom: 8px;
+        margin-top: 30px;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+    }
+    .card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 3px solid #800000;
+    }
+    .card-content {
+        padding: 18px;
+    }
+    .card-content h3 {
+        margin-top: 0;
+        color: #800000;
+    }
+    .card-content p {
+        line-height: 1.5;
+        color: #444;
+    }
+    footer {
+        background-color: #5C5C5C;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    ul {
+        padding-left: 25px;
+        line-height: 1.6;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    .culture-section {
+        background-color: #f5f0e6;
+        padding: 25px;
+        border-radius: 10px;
+        margin: 30px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+        height: 400px;
+        background-image: url('https://www.thesmartshoppee.com/cdn/shop/articles/Buy_Ram_Lalla_Idol_Online_559cac4b-5daa-415f-98be-0763cf4a2379.jpg?v=1711805316'),url('https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        margin: 20px 0;
+        border-radius: 12px;
+        position: relative;
+        background-repeat: no-repeat, no-repeat, no-repeat
+    }
+    .banner::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+    }
+    .banner-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+    }
+    .banner-content h2 {
+        color: white;
+        border-bottom: none;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+    @media (max-width: 768px) {
+        nav { flex-wrap: wrap; }
+        nav a { margin: 5px; }
+        .card-grid { grid-template-columns: 1fr; }
+        .banner { height: 300px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Uttar Pradesh</h1>
+    <p>The Heart of India, filled with history, spirituality, and culture</p>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="rajasthan.html">Rajasthan</a>
+    <a href="kerala.html">Kerala</a>
+    <a href="goa.html">Goa</a>
+    <a href="gujarat.html">Gujarat</a>
+    <a href="punjab.html">Punjab</a>
+    <a href="tamilnadu.html">Tamil Nadu</a>
+    <a href="bengal.html">West Bengal</a>
+    <a href="bihar.html">Bihar</a>
+    <a href="maharashtra.html">Maharashtra</a>
+</nav>
+
+<section>
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Discover the Heritage of Uttar Pradesh</h2>
+            <p>From the Taj Mahal to Varanasi ghats, experience India's cultural heartland</p>
+        </div>
+    </div>
+    
+    <h2 class="section-title">Top Tourist Spots in Uttar Pradesh</h2>
+<div class="container">
+    <div class="card-grid">
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/500px-Taj_Mahal_%28Edited%29.jpeg"><div class="card-body"><h3>Taj Mahal</h3><p>World-famous white marble mausoleum built by Shah Jahan — a UNESCO wonder of love.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Agra_03-2016_10_Agra_Fort.jpg/960px-Agra_03-2016_10_Agra_Fort.jpg"><div class="card-body"><h3>Agra Fort</h3><p>Massive red sandstone fort with palaces and mosques overlooking the Yamuna.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg/960px-Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg"><div class="card-body"><h3>Fatehpur Sikri</h3><p>Historic Mughal capital built by Akbar with palaces, mosques and courtyards.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Namo_Ghat.jpg/479px-Namo_Ghat.jpg"><div class="card-body"><h3>Varanasi Ghats</h3><p>Sacred ghats on the Ganges — spiritual heart with evening aarti ceremonies.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Ancient_Buddhist_monasteries_near_Dhamekh_Stupa_Monument_Site%2C_Sarnath.jpg/500px-Ancient_Buddhist_monasteries_near_Dhamekh_Stupa_Monument_Site%2C_Sarnath.jpg"><div class="card-body"><h3>Sarnath</h3><p>Buddhist site where Lord Buddha gave his first sermon — stupas and monasteries.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Chhota_imambara_Lucknow.jpg/640px-Chhota_imambara_Lucknow.jpg"><div class="card-body"><h3>Lucknow Bara Imambara</h3><p>Nawabi-era marvel, famous for its architecture and Bhulbhulaiya maze.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ayodhya_Ram_Mandir_Inauguration_Day_Picture.jpg/960px-Ayodhya_Ram_Mandir_Inauguration_Day_Picture.jpg"><div class="card-body"><h3>Ayodhya</h3><p>Ancient city of Lord Rama — major pilgrimage destination with temples & ghats.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Prem_Mandir_Vrindavan%2C_Mathura%2C_Uttar_Pradesh%2C_India_%282014%29.jpg/960px-Prem_Mandir_Vrindavan%2C_Mathura%2C_Uttar_Pradesh%2C_India_%282014%29.jpg"><div class="card-body"><h3>Mathura & Vrindavan</h3><p>Birthplace of Krishna — colorful temples, music and grand Holi celebrations.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Jhansi_Fort.jpg/500px-Jhansi_Fort.jpg"><div class="card-body"><h3>Jhansi Fort</h3><p>Stronghold of Rani Lakshmibai during the 1857 revolt — great hilltop views.</p><div class="badge">Best: Oct–Mar</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chitrakoot_bathing_ghats_on_the_Mandakini_River_INDIA.jpg/960px-Chitrakoot_bathing_ghats_on_the_Mandakini_River_INDIA.jpg"><div class="card-body"><h3>Chitrakoot</h3><p>Mythical Ramayana site with temples, forests and serene riverbanks.</p><div class="badge">Best: Sep–Feb</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Dudhwa_Tiger.jpg/960px-Dudhwa_Tiger.jpg"><div class="card-body"><h3>Dudhwa National Park</h3><p>Wildlife reserve with tigers, elephants, rhinos and diverse birds.</p><div class="badge">Best: Oct–Jun</div></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/NorthIndiaCircuit_250.jpg/640px-NorthIndiaCircuit_250.jpg"><div class="card-body"><h3>Prayagraj Sangam</h3><p>Triveni confluence of Ganga, Yamuna & Saraswati — site of Kumbh Mela.</p><div class="badge">Best: Oct–Feb</div></div></div>
+    </div>
+</div>
+</section>
+
+<section class="culture-section">
+    <h2>Culture of Uttar Pradesh</h2>
+    <p>UP is the cradle of Indian traditions — Kathak dance, Hindustani classical music, Urdu literature, and exquisite crafts like Chikankari embroidery. Festivals like Holi, Diwali and Kumbh Mela reflect its vibrant spirit.</p>
+</section>
+
+<section>
+    <h2>Wedding Style</h2>
+    <p>UP weddings mix grandeur with tradition — brides in zardosi lehengas, grooms in sherwanis, rituals with shehnai music, and feasts featuring rich Awadhi cuisine.</p>
+</section>
+
+<section>
+    <h2>Major Crops</h2>
+    <ul>
+        <li><strong>Wheat</strong> - Staple crop and widely cultivated</li>
+        <li><strong>Sugarcane</strong> - Major cash crop</li>
+        <li><strong>Rice</strong> - Important food grain</li>
+        <li><strong>Pulses</strong> - Various pulses grown across the state</li>
+        <li><strong>Oilseeds</strong> - Sunflower, mustard, and others</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 Explore India | Uttar Pradesh Tourism Project</p>
+</footer>
+
+</body>
+</html>

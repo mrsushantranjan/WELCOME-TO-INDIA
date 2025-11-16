@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himachal Pradesh - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #0B6E4F);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #0B6E4F;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #0B6E4F;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #0B6E4F;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #0B6E4F;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #0B6E4F;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Manali_valley_Himachal_Pradesh.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Himachal Pradesh</h1>
+  <p>Snowy peaks, pine forests, serene valleys and mountain culture</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">West Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Beauty of Himachal Pradesh</h2>
+      <p>From Shimla to Spiti, explore mountains, valleys, and vibrant hill culture</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Spots in Himachal Pradesh</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaiety_Theatre_or_Gaiety_Heritage_Cultural_Complex_in_Shimla%2C_photographed_by_Yogabrata_Chakraborty%2C_on_May_2023.jpg/960px-Gaiety_Theatre_or_Gaiety_Heritage_Cultural_Complex_in_Shimla%2C_photographed_by_Yogabrata_Chakraborty%2C_on_May_2023.jpg"><div class="card-content"><h3>Shimla</h3><p>Colonial charm, Mall Road, and Himalayan views.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Manali_City.jpg/960px-Manali_City.jpg"><div class="card-content"><h3>Manali</h3><p>Adventure hub with Solang, Rohtang, and apple orchards.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/McLeod_Ganj_Dharamkot_Dharmsala_Himachal_Pradesh_India_April_2014.jpg/640px-McLeod_Ganj_Dharamkot_Dharmsala_Himachal_Pradesh_India_April_2014.jpg"><div class="card-content"><h3>Dharamshala & McLeod Ganj</h3><p>Dalai Lama’s residence, Tibetan culture, monasteries.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg/960px-Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg"><div class="card-content"><h3>Spiti Valley</h3><p>High-altitude desert with monasteries and treks.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Beas_River%2C_Kullu_Valley.jpg/960px-Beas_River%2C_Kullu_Valley.jpg"><div class="card-content"><h3>Kullu</h3><p>Valleys, temples, and vibrant Dussehra festival.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Parvati_Valley_river_kasol.jpg/330px-Parvati_Valley_river_kasol.jpg"><div class="card-content"><h3>Kasol</h3><p>Backpacker’s paradise in Parvati Valley.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Khajjiar.jpg/500px-Khajjiar.jpg"><div class="card-content"><h3>Khajjiar</h3><p>Mini Switzerland with lush meadows and lake.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chamba_from_across_the_river%2C_Himachal_Pradesh.jpg/500px-Chamba_from_across_the_river%2C_Himachal_Pradesh.jpg"><div class="card-content"><h3>Chamba</h3><p>Historic town with temples and crafts.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Kinnaur_kailash%286050m%29_and_Jorkanden_%286473_m%29_from_Kalpa_photographed_By_Sumita_Roy.jpg/500px-Kinnaur_kailash%286050m%29_and_Jorkanden_%286473_m%29_from_Kalpa_photographed_By_Sumita_Roy.jpg"><div class="card-content"><h3>Kinnaur</h3><p>Apple orchards and Sangla Valley views.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Kufri_hills.jpg/500px-Kufri_hills.jpg"><div class="card-content"><h3>Kufri</h3><p>Snow sports and Himalayan views near Shimla.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Solang_Valley_%2CManali%2C_Himachal_Pardes%2C_India.JPG/500px-Solang_Valley_%2CManali%2C_Himachal_Pardes%2C_India.JPG"><div class="card-content"><h3>Solang Valley</h3><p>Adventure sports like skiing and paragliding.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Narkanda_India1.jpg/500px-Narkanda_India1.jpg"><div class="card-content"><h3>Narkanda</h3><p>Quiet town with apple orchards and ski slopes.</p></div></div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Himachal Pradesh</h2>
+  <p>Himachal Pradesh is known for traditional dances like Nati, colorful handicrafts, vibrant fairs, and unique temple architecture. Festivals like Kullu Dussehra and Losar highlight its rich traditions.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Himachali weddings feature folk songs, colorful attire, rituals like Devta puja, and community feasts in traditional ‘Dham’ style.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Apple</li>
+    <li>Maize</li>
+    <li>Wheat</li>
+    <li>Barley</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Himachal Pradesh Tourism Project</p>
+  <p>Designed with ❤️ for culture and nature lovers</p>
+</footer>
+
+</body>
+</html>

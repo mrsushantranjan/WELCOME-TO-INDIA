@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #2E8B57, #004d26);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #004d26;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #004d26;
+      border-bottom: 3px solid #2E8B57;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #004d26;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #2E8B57;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #004d26;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Alleppey_Houseboat.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Kerala</h1>
+  <p>God’s Own Country – Backwaters, Beaches, and Traditions</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="goa.html">Goa</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">West Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Backwaters of Kerala</h2>
+      <p>From Alleppey to Munnar, enjoy nature, culture, and Ayurveda</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Spots in Kerala</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Alappuzha_Boat_Beauty_W.jpg/960px-Alappuzha_Boat_Beauty_W.jpg"><div class="card-content"><h3>Alleppey</h3><p>Famous for houseboats and serene backwaters.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Munnar_Overview.jpg/500px-Munnar_Overview.jpg"><div class="card-content"><h3>Munnar</h3><p>Tea plantations and misty hills.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Kovalam_beach_trivandrum_kerala.jpg/960px-Kovalam_beach_trivandrum_kerala.jpg"><div class="card-content"><h3>Kovalam</h3><p>Golden sands and beach vibes.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Thekkady.jpg/500px-Thekkady.jpg"><div class="card-content"><h3>Thekkady</h3><p>Periyar Wildlife Sanctuary and spice gardens.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Sulthan_Bathery_Ricefarm2.jpg/500px-Sulthan_Bathery_Ricefarm2.jpg"><div class="card-content"><h3>Wayanad</h3><p>Forests, waterfalls, and wildlife.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/INS_Vikrant_under_construction_at_Cochin_Shipyard.png/960px-INS_Vikrant_under_construction_at_Cochin_Shipyard.png"><div class="card-content"><h3>Kochi</h3><p>Historic port city with fishing nets and spice markets.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Varkala_Beach%2C_Varkala%2C_Kerala.jpg/960px-Varkala_Beach%2C_Varkala%2C_Kerala.jpg"><div class="card-content"><h3>Varkala</h3><p>Cliffside beach and yoga retreats.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Bakel_Fort_Beach_Kasaragod7.jpg/500px-Bakel_Fort_Beach_Kasaragod7.jpg"><div class="card-content"><h3>Bekal Fort</h3><p>Sea-facing fort with panoramic views.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/The_View_of_the_Athirapally_Falls_during_the_onset_of_Monsoon.jpg/2560px-The_View_of_the_Athirapally_Falls_during_the_onset_of_Monsoon.jpg"><div class="card-content"><h3>Thrissur</h3><p>Cultural capital famous for Thrissur Pooram.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Kumarkom.jpg/500px-Kumarkom.jpg"><div class="card-content"><h3>Kumarakom</h3><p>Backwaters and bird sanctuary.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Morning_at_Ponmudi.jpg/960px-Morning_at_Ponmudi.jpg"><div class="card-content"><h3>Ponmudi</h3><p>Hill station with winding roads and misty peaks.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SAN_BIRDS_48.jpg/960px-SAN_BIRDS_48.jpg"><div class="card-content"><h3>Silent Valley</h3><p>Pristine rainforest with rich biodiversity.</p></div></div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Kerala</h2>
+  <p>Kerala is famous for Kathakali, Mohiniyattam, temple festivals, and Ayurveda traditions, blending Hindu, Muslim, and Christian heritage.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Weddings in Kerala are elegant, featuring gold jewelry, Kasavu sarees, and simple temple or church rituals.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Coconut</li>
+    <li>Spices (Cardamom, Pepper)</li>
+    <li>Tea & Coffee</li>
+    <li>Rubber</li>
+    <li>Paddy (Rice)</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Kerala Tourism Project</p>
+  <p>Designed with ❤️ for culture and nature lovers</p>
+</footer>
+
+</body>
+</html>

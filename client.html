@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client - Explore India</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #e25822;
+            --color-primary-light: #ff7f50;
+            --color-primary-dark: #c3410f;
+            --color-secondary: #1e90ff;
+            --color-accent: #ffd700;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-bg-overlay: rgba(0, 0, 0, 0.6);
+            --color-footer-dark-1: #1a1a2e;
+            --color-footer-dark-2: #16213e;
+            --color-footer-text: #ddd;
+            --color-footer-link-hover: #ff7f50;
+            --color-white: #fff;
+            --color-light-bg: #f8f9fa;
+            --color-success: #28a745;
+            --color-warning: #ffc107;
+            --color-info: #17a2b8;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-light-bg);
+            padding-top: 80px;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link:focus {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        /* Client Panel Header */
+        .client-header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-radius: 0 0 15px 15px;
+        }
+        
+        .client-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .client-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Dashboard Cards */
+        .dashboard-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            border: 1px solid #eee;
+            margin-bottom: 25px;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Booking History */
+        .booking-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .booking-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .status-confirmed {
+            background-color: rgba(40, 167, 69, 0.2);
+            color: var(--color-success);
+        }
+        
+        .status-pending {
+            background-color: rgba(255, 193, 7, 0.2);
+            color: var(--color-warning);
+        }
+        
+        .status-cancelled {
+            background-color: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+        }
+        
+        /* Wishlist */
+        .wishlist-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .wishlist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .wishlist-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .wishlist-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .wishlist-card:hover .wishlist-img img {
+            transform: scale(1.1);
+        }
+        
+        .wishlist-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+        }
+        
+        .wishlist-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        
+        /* Preferences */
+        .preference-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid var(--color-primary);
+        }
+        
+        /* Tabs */
+        .nav-tabs .nav-link {
+            color: var(--color-text) !important;
+            padding: 12px 25px !important;
+            border: none !important;
+            border-radius: 0;
+            font-weight: 600;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--color-primary) !important;
+            border-bottom: 3px solid var(--color-primary) !important;
+            background: transparent;
+        }
+        
+        /* Badges */
+        .badge-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--color-accent);
+            color: #333;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .client-header {
+                padding: 30px 0;
+            }
+            
+            .client-avatar {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-map-marked-alt me-2"></i>Explore India
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="client.html"><i class="fas fa-user me-1"></i> My Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Client Header -->
+    <div class="client-header">
+        <div class="container text-center">
+            <div class="client-avatar">
+                <img src="MYPHOTO copy.jpeg" alt="Sushant Pathak">
+            </div>
+            <h2>Sushant Pathak</h2>
+            <p class="mb-0">Explorer since January 2023</p>
+            <div class="d-flex justify-content-center mt-2">
+                <div class="mx-2">
+                    <i class="fas fa-map-marker-alt me-1"></i> INDIA, BIHAR
+                </div>
+                <div class="mx-2">
+                    <i class="fas fa-heart me-1"></i> 11 Wishlisted
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 mb-4">
+                <div class="dashboard-card">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h5>Profile Completion</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="small">Complete your profile to get personalized recommendations</p>
+                        <a href="#" class="btn btn-primary btn-sm">Complete Profile</a>
+                    </div>
+                </div>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-heart me-2"></i> Wishlist
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-cog me-2"></i> Preferences
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-star me-2"></i> Reviews
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-bell me-2"></i> Notifications
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="col-lg-9">
+                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="wishlist-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button" role="tab" aria-controls="wishlist" aria-selected="false">Wishlist</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="preferences-tab" data-bs-toggle="tab" data-bs-target="#preferences" type="button" role="tab" aria-controls="preferences" aria-selected="false">Preferences</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                    <!-- Dashboard Tab -->
+                    <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="dashboard-card text-center">
+                                    <div class="card-body">
+                                        <div class="card-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <h3>12</h3>
+                                        <p class="text-muted">Wishlisted Places</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="dashboard-card text-center">
+                                    <div class="card-body">
+                                        <div class="card-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h3>8</h3>
+                                        <p class="text-muted">Reviews Written</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="dashboard-card text-center">
+                                    <div class="card-body">
+                                        <div class="card-icon">
+                                            <i class="fas fa-map-marked-alt"></i>
+                                        </div>
+                                        <h3>7</h3>
+                                        <p class="text-muted">States Visited</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-heart text-danger fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Added Goa to your wishlist</h6>
+                                        <p class="text-muted mb-0">2 days ago</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-star text-warning fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Rated Kerala Backwaters 5 stars</h6>
+                                        <p class="text-muted mb-0">1 week ago</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-share-alt text-info fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Shared Himachal Pradesh itinerary with friends</h6>
+                                        <p class="text-muted mb-0">2 weeks ago</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt text-primary fa-2x"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0">Added new destination to your travel map</h6>
+                                        <p class="text-muted mb-0">3 weeks ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Recommended For You</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="wishlist-card">
+                                            <div class="wishlist-img">
+                                                <img src="https://www.savaari.com/blog/wp-content/uploads/2021/07/1.intro_.jpg" alt="Ladakh">
+                                            </div>
+                                            <div class="wishlist-overlay">
+                                                <h5 class="mb-0">Ladakh</h5>
+                                                <p class="mb-0">Adventure in the Himalayas</p>
+                                            </div>
+                                            <div class="wishlist-actions">
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-heart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="wishlist-card">
+                                            <div class="wishlist-img">
+                                                <img src="https://servdharm.com/cdn/shop/articles/Wallpaper_900x.jpg?v=1694405183" alt="Varanasi">
+                                            </div>
+                                            <div class="wishlist-overlay">
+                                                <h5 class="mb-0">Varanasi</h5>
+                                                <p class="mb-0">Spiritual experience</p>
+                                            </div>
+                                            <div class="wishlist-actions">
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-heart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="wishlist-card">
+                                            <div class="wishlist-img">
+                                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/60/29/05/caption.jpg?w=800&h=800&s=1" alt="Andaman Islands">
+                                            </div>
+                                            <div class="wishlist-overlay">
+                                                <h5 class="mb-0">Andaman Islands</h5>
+                                                <p class="mb-0">Tropical paradise</p>
+                                            </div>
+                                            <div class="wishlist-actions">
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-heart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Tab -->
+                    <div class="tab-pane fade" id="wishlist" role="tabpanel" aria-labelledby="wishlist-tab">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Goa Beaches">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Goa</h5>
+                                        <p class="mb-0">Beautiful beaches & Portuguese heritage</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://www.gojaisalmer.com/img/fort-jaisalmer.jpg" alt="Rajasthan Fort">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Rajasthan</h5>
+                                        <p class="mb-0">Majestic forts & desert landscapes</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://images.articlesfactory.com/750x0/3597498b-d1b3-496f-83c3-7968af81e27f.webp" alt="Kerala Backwaters">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Kerala</h5>
+                                        <p class="mb-0">Serene backwaters & lush greenery</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://blog.dookinternational.com/images/post-media/Iu2Y61682572274.jpg" alt="Himachal Mountains">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Himachal Pradesh</h5>
+                                        <p class="mb-0">Majestic Himalayas & hill stations</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tamil Nadu Temple">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Tamil Nadu</h5>
+                                        <p class="mb-0">Ancient temples & rich culture</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="wishlist-card">
+                                    <div class="wishlist-img">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ayodhya_Ram_Mandir_Inauguration_Day_Picture.jpg/1200px-Ayodhya_Ram_Mandir_Inauguration_Day_Picture.jpg" alt="Uttar Pradesh">
+                                    </div>
+                                    <div class="wishlist-overlay">
+                                        <h5 class="mb-0">Uttar Pradesh</h5>
+                                        <p class="mb-0">Spiritual heritage & historical sites</p>
+                                    </div>
+                                    <div class="wishlist-actions">
+                                        <button class="btn btn-sm btn-light"><i class="fas fa-heart text-danger"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Tab -->
+                    <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferences-tab">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">Travel Preferences</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="preference-item">
+                                    <h5>Travel Interests</h5>
+                                    <div class="d-flex flex-wrap gap-2 mt-3">
+                                        <span class="badge bg-primary p-2">Adventure</span>
+                                        <span class="badge bg-primary p-2">Culture</span>
+                                        <span class="badge bg-primary p-2">History</span>
+                                        <span class="badge bg-primary p-2">Nature</span>
+                                        <span class="badge bg-primary p-2">Food</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary mt-3">Edit Interests</button>
+                                </div>
+
+                                <div class="preference-item">
+                                    <h5>Accommodation Preferences</h5>
+                                    <div class="form-check form-switch mt-3">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Luxury Hotels</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Budget Stays</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked1" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked1">Homestays</label>
+                                    </div>
+                                </div>
+
+                                <div class="preference-item">
+                                    <h5>Notification Preferences</h5>
+                                    <div class="form-check form-switch mt-3">
+                                        <input class="form-check-input" type="checkbox" id="notif1" checked>
+                                        <label class="form-check-label" for="notif1">Email Notifications</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="notif2" checked>
+                                        <label class="form-check-label" for="notif2">Promotional Offers</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="notif3">
+                                        <label class="form-check-label" for="notif3">SMS Notifications</label>
+                                    </div>
+                                </div>
+
+                                <div class="text-end mt-4">
+                                    <button class="btn btn-primary">Save Preferences</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Explore India</h5>
+                        <p>Your ultimate travel companion, guiding you through India's breathtaking landscapes, diverse culture, and historic landmarks.</p>
+                        <div class="social-icons mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="../index.html"><i class="fas fa-angle-right me-2"></i> Home</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> Destinations</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> Travel Guides</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Popular States</h5>
+                        <ul class="footer-links">
+                            <li><a href="rajasthan.html"><i class="fas fa-angle-right me-2"></i> Rajasthan</a></li>
+                            <li><a href="goa.html"><i class="fas fa-angle-right me-2"></i> Goa</a></li>
+                            <li><a href="kerala.html"><i class="fas fa-angle-right me-2"></i> Kerala</a></li>
+                            <li><a href="hp.html"><i class="fas fa-angle-right me-2"></i> Himachal Pradesh</a></li>
+                            <li><a href="uttarpradesh.html"><i class="fas fa-angle-right me-2"></i> Uttar Pradesh</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Contact Us</h5>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-envelope me-2"></i> sushantpathak2028@gmail.com</li>
+                            <li><i class="fas fa-phone me-2"></i> +91 70507 94068</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Rajkot, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p align="center">© 2025 Explore India Project | Designed by Sushant Pathak</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

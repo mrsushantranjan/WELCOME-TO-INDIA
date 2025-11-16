@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>West Bengal - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #800000);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #800000;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #800000;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #ddd;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #800000;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #800000;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #5C5C5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 25px;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/Victoria_Memorial_Kolkata.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore West Bengal</h1>
+  <p>Land of Culture, Festivals, and Natural Beauty</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Charm of West Bengal</h2>
+      <p>From the Himalayas to the Sundarbans, Bengal is a blend of culture, nature, and history.</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in West Bengal</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/2880px-Victoria_Memorial_situated_in_Kolkata.jpg"><div class="card-content"><h3>Victoria Memorial</h3><p>Iconic white marble monument in Kolkata.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Save_the_sundarbans_20.jpg/960px-Save_the_sundarbans_20.jpg"><div class="card-content"><h3>Sundarbans</h3><p>Largest mangrove forest and home to the Royal Bengal Tiger.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Darjeeling-panoramic.jpg/960px-Darjeeling-panoramic.jpg"><div class="card-content"><h3>Darjeeling</h3><p>Famous for tea gardens, toy train, and Himalayan views.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Howrah_bridge_at_night.jpg/960px-Howrah_bridge_at_night.jpg"><div class="card-content"><h3>Howrah Bridge</h3><p>Engineering marvel connecting Kolkata and Howrah.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Kalighat_Kali_Temple_after_renovation.jpg/500px-Kalighat_Kali_Temple_after_renovation.jpg"><div class="card-content"><h3>Kalighat Kali Temple</h3><p>Sacred Hindu temple dedicated to Goddess Kali.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Digha_sea_beach_in_Digha_town_20.jpg/330px-Digha_sea_beach_in_Digha_town_20.jpg"><div class="card-content"><h3>Digha Beach</h3><p>Popular seaside destination for relaxation.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Shantiniketan_Bari_of_Rabindranath_Tagore.jpg/500px-Shantiniketan_Bari_of_Rabindranath_Tagore.jpg"><div class="card-content"><h3>Shantiniketan</h3><p>Founded by Rabindranath Tagore, a hub of art and culture.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Mukutmonipur.JPG/500px-Mukutmonipur.JPG"><div class="card-content"><h3>Mukutmanipur</h3><p>Picturesque dam surrounded by hills and forests.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Rasmancha%2C_Bishnupur%2C_Bankura.jpg/250px-Rasmancha%2C_Bishnupur%2C_Bankura.jpg"><div class="card-content"><h3>Bishnupur</h3><p>Known for terracotta temples and Baluchari sarees.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Belur_Math%2C_Howrah.jpg/500px-Belur_Math%2C_Howrah.jpg"><div class="card-content"><h3>Belur Math</h3><p>Spiritual headquarters of the Ramakrishna Mission.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Kurseong_panorama_by_Mayukh_Ghose.jpg/960px-Kurseong_panorama_by_Mayukh_Ghose.jpg"><div class="card-content"><h3>Kurseong</h3><p>Quiet hill station famous for orchids and tea.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg/960px-The_Cooch_Behar_Palace_or_the_Cooch_Behar_Rajbari%2C_Cooch_Behar_District%2C_West_Bengal%2C_India_01.jpg"><div class="card-content"><h3>Cooch Behar Palace</h3><p>Beautiful royal palace inspired by European architecture.</p></div></div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of West Bengal</h2>
+  <p>West Bengal is famous for Durga Puja celebrations, Bengali literature, Rabindra Sangeet, traditional art, and sweets like Rosogolla and Sandesh.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Bengali weddings feature the bride in a red Benarasi saree, groom in dhoti-kurta with a 'Topor', and rituals like 'Shubho Drishti' and 'Saat Paak'.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Rice</li>
+    <li>Jute</li>
+    <li>Tea</li>
+    <li>Sugarcane</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | West Bengal Tourism Project</p>
+  <p>Designed with ❤️ for culture lovers</p>
+</footer>
+
+</body>
+</html>

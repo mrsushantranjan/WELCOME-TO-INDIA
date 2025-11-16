@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bihar - Explore India</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #5C5C5C, #800000);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            margin: 10px 0 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        nav {
+            background-color: #800000;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFDAB9;
+        }
+        section {
+            padding: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #800000;
+            border-bottom: 3px solid #5C5C5C;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #800000;
+        }
+        .card-content {
+            padding: 18px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #800000;
+        }
+        .card-content p {
+            line-height: 1.5;
+            color: #444;
+        }
+        footer {
+            background-color: #5C5C5C;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        ul {
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .culture-section {
+            background-color: #f5f0e6;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .culture-section p {
+            line-height: 1.6;
+        }
+        .banner {
+            height: 400px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Mahabodhi_Temple_Bodh_Gaya_2016_IMG_7757.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 12px;
+            position: relative;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+        }
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .banner-content h2 {
+            color: white;
+            border-bottom: none;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .banner-content p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Bihar</h1>
+    <p>Land of Ancient Universities, Temples, and Rich Traditions</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="rajasthan.html">Rajasthan</a>
+    <a href="kerala.html">Kerala</a>
+    <a href="goa.html">Goa</a>
+    <a href="gujarat.html">Gujarat</a>
+    <a href="punjab.html">Punjab</a>
+    <a href="uttarpradesh.html">Uttar Pradesh</a>
+    <a href="hp.html">Himachal Pradesh</a>
+    <a href="tamilnadu.html">Tamil Nadu</a>
+    <a href="bengal.html">Bengal</a>
+    <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Explore the Timeless Heritage of Bihar</h2>
+            <p>From Nalanda to Bodh Gaya, explore history, spirituality, and culture in the heart of India.</p>
+        </div>
+    </div>
+    
+    <h2>Top 12 Tourist Places in Bihar</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nalanda_University_at_dusk.jpg" alt="Nalanda University" />
+            <div class="card-content">
+                <h3>Nalanda University</h3>
+                <p>Ancient center of learning, UNESCO World Heritage Site.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://t4.ftcdn.net/jpg/01/05/09/43/240_F_105094341_VmR4OKwP9w8zsncQgycIUcqGbKUK0j3M.jpg" alt="Bodh Gaya" />
+            <div class="card-content">
+                <h3>Bodh Gaya</h3>
+                <p>Site where Lord Buddha attained enlightenment.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Rajgir_-_035_Gijjhakuta_from_Above_%289242176293%29.jpg/330px-Rajgir_-_035_Gijjhakuta_from_Above_%289242176293%29.jpg" alt="Rajgir" />
+            <div class="card-content">
+                <h3>Rajgir</h3>
+                <p>Historic city associated with Buddha and Mahavira.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/N-BR-68_Relic_Stupa_Vaishali_%282%29.jpg/500px-N-BR-68_Relic_Stupa_Vaishali_%282%29.jpg" alt="Vaishali" />
+            <div class="card-content">
+                <h3>Vaishali</h3>
+                <p>Important ancient city and Buddhist pilgrimage site.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-WW1lCGhHMeOkPLw15-Fr-buc0zQiS7j_ilbyvdA34I6xk5zF8Jb3_LDhi4k0f7Tzue8&usqp=CAU" alt="Vikramshila University" />
+            <div class="card-content">
+                <h3>Vikramshila University</h3>
+                <p>Ruins of another great ancient university.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Samhosharan_mandir89.jpg/330px-Samhosharan_mandir89.jpg" alt="Pawapuri" />
+            <div class="card-content">
+                <h3>Pawapuri</h3>
+                <p>Sacred Jain temple built in the middle of a lake.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Patna_Museum_-_General_View_%289221515542%29.jpg/960px-Patna_Museum_-_General_View_%289221515542%29.jpg" alt="Patna Museum" />
+            <div class="card-content">
+                <h3>Patna Museum</h3>
+                <p>Houses artifacts from Bihar's glorious past.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Lomas_Rishi_entrance.jpg/500px-Lomas_Rishi_entrance.jpg" alt="Barabar Caves" />
+            <div class="card-content">
+                <h3>Barabar Caves</h3>
+                <p>Oldest surviving rock-cut caves in India.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Kesariya.jpg/960px-Kesariya.jpg" alt="Kesariya Stupa" />
+            <div class="card-content">
+                <h3>Kesariya Stupa</h3>
+                <p>One of the tallest and largest Buddhist stupas.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnkxdvag2g0dd04evmal19W28_fsnSjlfes6uFjpcxO-JN6n9Os8YP6ZM1wVIsu4_46ekZzsSVOO_vRAXdrXQ2U3Rwup5YzwdFHeFZmSmeTQ" alt="Buxar Fort" />
+            <div class="card-content">
+                <h3>Buxar Fort</h3>
+                <p>Historic fort along the Ganges river.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Waterfall_Kakolat.jpg/500px-Waterfall_Kakolat.jpg" alt="Kakolat Waterfall" />
+            <div class="card-content">
+                <h3>Kakolat Waterfall</h3>
+                <p>Popular natural attraction near Nawada.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/TheJoyof350thAnniversary%40IncredibleIndia.jpg/500px-TheJoyof350thAnniversary%40IncredibleIndia.jpg" alt="Takht Sri Patna Sahib" />
+            <div class="card-content">
+                <h3>Takht Sri Patna Sahib</h3>
+                <p>Gurdwara dedicated to Guru Gobind Singh Ji.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="culture-section">
+    <h2>Culture of Bihar</h2>
+    <p>Bihar is famous for Madhubani paintings, folk dances, Bhojpuri music, and festivals like Chhath Puja. It has deep roots in Buddhism and Jainism, making it a unique cultural and spiritual hub.</p>
+</section>
+
+<section>
+    <h2>Wedding Style</h2>
+    <p>Traditional Bihari weddings feature vibrant sarees, dhotis, folk songs, and rituals accompanied by dholak beats and joyous cultural performances.</p>
+</section>
+
+<section>
+    <h2>Major Crops</h2>
+    <ul>
+        <li>Paddy (Rice)</li>
+        <li>Wheat</li>
+        <li>Maize</li>
+        <li>Pulses</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 Explore India | Bihar Tourism Project</p>
+    <p>Designed with ❤️ for culture enthusiasts</p>
+</footer>
+
+</body>
+</html>

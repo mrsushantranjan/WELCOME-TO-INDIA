@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharashtra - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #FF6F00, #FF8F33);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    nav {
+      background-color: #002147;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255,255,255,0.2);
+      color: #FFD580;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #FF6F00;
+      border-bottom: 3px solid #002147;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #FF6F00;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #FF6F00;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .culture-section {
+      background-color: #fff2e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/Gateway_of_India_Mumbai_03-2016_img3.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Maharashtra</h1>
+  <p>Land of Caves, Beaches, and Cultural Grandeur</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">West Bengal</a>
+  <a href="bihar.html">Bihar</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Spirit of Maharashtra</h2>
+      <p>From Mumbai’s skyline to Ajanta’s caves — history, culture & modernity blend together</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Maharashtra</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/960px-Mumbai_03-2016_30_Gateway_of_India.jpg"><div class="card-content"><h3>Gateway of India</h3><p>Iconic monument in Mumbai facing the Arabian Sea.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ajanta_%2863%29.jpg/960px-Ajanta_%2863%29.jpg"><div class="card-content"><h3>Ajanta Caves</h3><p>Ancient Buddhist rock-cut caves with stunning paintings.</p></div></div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ellora_cave16_001.jpg/500px-Ellora_cave16_001.jpg">
+      <div class="card-content"><h3>Ellora Caves</h3><p>UNESCO site with Hindu, Buddhist, and Jain monuments.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Sai_baba_samadhi_mandir_.jpg"><div class="card-content"><h3>Shirdi</h3><p>Sacred shrine of Sai Baba, attracting millions of devotees.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mumbai_Pune_Expressway2.jpg/576px-Mumbai_Pune_Expressway2.jpg"><div class="card-content"><h3>Lonavala</h3><p>Popular hill station famous for its greenery and chikki.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MAHABALESWAR_LANDSCAPE.jpg/500px-MAHABALESWAR_LANDSCAPE.jpg"><div class="card-content"><h3>Mahabaleshwar</h3><p>Hill station known for strawberries and viewpoints.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panthera_tigris_tigris_Tidoba_20150306.jpg/960px-Panthera_tigris_tigris_Tidoba_20150306.jpg"><div class="card-content"><h3>Tadoba National Park</h3><p>Wildlife sanctuary known for tigers and biodiversity.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sindhudurg_fort.JPG/600px-Sindhudurg_fort.JPG"><div class="card-content"><h3>Sindhudurg Fort</h3><p>Sea fort built by Chhatrapati Shivaji Maharaj.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Elephanta_Caves_Trimurti.jpg/500px-Elephanta_Caves_Trimurti.jpg"><div class="card-content"><h3>Elephanta Caves</h3><p>Island caves with rock-cut sculptures of Lord Shiva.</p>
+    </div>
+  </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Alibag_Sea_beach_3%2C_Maharashtra.JPG/500px-Alibag_Sea_beach_3%2C_Maharashtra.JPG">
+      <div class="card-content"><h3>Alibaug Beach</h3><p>Coastal town with serene beaches and forts.</p></div></div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Chhatrapati_shivaji_terminus%2C_esterno_01.jpg/960px-Chhatrapati_shivaji_terminus%2C_esterno_01.jpg">
+      <div class="card-content"><h3>CSMT Mumbai</h3>
+        <p>UNESCO-listed railway station with Gothic architecture.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Pilgrims_1_%282731600954%29.jpg/330px-Pilgrims_1_%282731600954%29.jpg">
+      <div class="card-content"><h3>Pandharpur</h3><p>Important pilgrimage site dedicated to Lord Vitthal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Maharashtra</h2>
+  <p>Maharashtra is famous for Lavani dance, Ganesh Chaturthi celebrations, and Warli tribal art. It blends historic Maratha traditions with modern urban culture.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Traditional weddings feature Paithani sarees, dhoti-kurta, pheta (turban), and rituals set to the music of shehnai and dhol-tasha.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Cotton</li>
+    <li>Sugarcane</li>
+    <li>Soybeans</li>
+    <li>Rice</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Maharashtra Tourism Project</p>
+  <p>Designed with ❤️ for culture and heritage lovers</p>
+</footer>
+
+</body>
+</html>

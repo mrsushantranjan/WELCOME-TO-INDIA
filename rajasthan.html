@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajasthan - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff7f0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #b34700, #ff751a);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    nav {
+      background-color: #802b00;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255,255,255,0.2);
+      color: #FFD580;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #b34700;
+      border-bottom: 3px solid #ff751a;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/70/Hawa_Mahal_2011.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      border-bottom: none;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #ff751a;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #b34700;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #802b00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .highlight-box {
+      background-color: #fff2e6;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Rajasthan</h1>
+  <p>The Land of Kings, Forts, and Desert</p>
+</header>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="gujarat.html">Gujarat</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">West Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Experience the Royal Heritage of Rajasthan</h2>
+      <p>From desert safaris to majestic forts — Rajasthan is a journey into timeless royalty</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Rajasthan</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/960px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg"><div class="card-content"><h3>Hawa Mahal</h3><p>Iconic palace in Jaipur, also known as the Palace of Winds.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Jaisalmer_forteresse.jpg/960px-Jaisalmer_forteresse.jpg"><div class="card-content"><h3>Jaisalmer Fort</h3><p>Golden Fort rising from the Thar Desert.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Jodhpur_mehrangarh_fort_%28enhanced%29.jpg/500px-Jodhpur_mehrangarh_fort_%28enhanced%29.jpg"><div class="card-content"><h3>Mehrangarh Fort</h3><p>Massive fort overlooking the Blue City of Jodhpur.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Udaipur_City_Palace.jpg/960px-Udaipur_City_Palace.jpg"><div class="card-content"><h3>Udaipur City Palace</h3><p>Stunning palace by Lake Pichola.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Pushkar.jpg/500px-Pushkar.jpg"><div class="card-content"><h3>Pushkar</h3><p>Holy city with Brahma Temple and Camel Fair.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mount_Abu.jpg/500px-Mount_Abu.jpg"><div class="card-content"><h3>Mount Abu</h3><p>Only hill station in Rajasthan with Dilwara Temples.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/500px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg"><div class="card-content"><h3>Amber Fort</h3><p>Famous for its artistic style elements.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ranthambhore_Fort.jpg/960px-Ranthambhore_Fort.jpg"><div class="card-content"><h3>Ranthambore</h3><p>National park and tiger reserve with ancient fort.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bikaner_fort_view_08.jpg/640px-Bikaner_fort_view_08.jpg"><div class="card-content"><h3>Junagarh Fort, Bikaner</h3><p>Well-preserved fort with ornate palaces.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Chittorgarh_fort.JPG/960px-Chittorgarh_fort.JPG"><div class="card-content"><h3>Chittorgarh Fort</h3><p>Largest fort in India, symbol of Rajput valor.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jaisalmer_Fort.jpg/640px-Jaisalmer_Fort.jpg"><div class="card-content"><h3>Sam Sand Dunes</h3><p>Desert safari destination near Jaisalmer.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Jaipur_03-2016_39_Jal_Mahal_-_Water_Palace.jpg/960px-Jaipur_03-2016_39_Jal_Mahal_-_Water_Palace.jpg"><div class="card-content"><h3>Jal Mahal</h3><p>Water palace in the middle of Man Sagar Lake.</p></div></div>
+  </div>
+</section>
+
+<section class="highlight-box">
+  <h2>Culture of Rajasthan</h2>
+  <p>Rajasthan is known for its royal heritage, colorful festivals like Desert Festival and Teej, folk dances like Ghoomar and Kalbeliya, and intricate handicrafts including block printing, blue pottery, and miniature paintings.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Rajasthani weddings are royal and grand, featuring traditional attire, elephant or horse processions, and elaborate feasts with Dal-Baati-Churma and Ghevar.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Bajra (Pearl Millet)</li>
+    <li>Wheat</li>
+    <li>Barley</li>
+    <li>Pulses</li>
+    <li>Mustard</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Rajasthan Tourism Project</p>
+  <p>Designed with ❤️ for culture and heritage</p>
+</footer>
+
+</body>
+</html>

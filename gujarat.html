@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gujarat - Explore India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #5C5C5C, #800000);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #800000;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #FFDAB9;
+    }
+    section {
+      padding: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #800000;
+      border-bottom: 3px solid #5C5C5C;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #800000;
+    }
+    .card-content {
+      padding: 18px;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: #800000;
+    }
+    .card-content p {
+      line-height: 1.5;
+      color: #444;
+    }
+    footer {
+      background-color: #5C5C5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      padding-left: 25px;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .culture-section {
+      background-color: #f5f0e6;
+      padding: 25px;
+      border-radius: 10px;
+      margin: 30px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .banner {
+      height: 400px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/White_Rann_of_Kutch.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 12px;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .banner-content h2 {
+      color: white;
+      border-bottom: none;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .banner-content p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Gujarat</h1>
+  <p>The Land of Legends, Temples, and White Desert</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="rajasthan.html">Rajasthan</a>
+  <a href="kerala.html">Kerala</a>
+  <a href="goa.html">Goa</a>
+  <a href="punjab.html">Punjab</a>
+  <a href="uttarpradesh.html">Uttar Pradesh</a>
+  <a href="hp.html">Himachal Pradesh</a>
+  <a href="tamilnadu.html">Tamil Nadu</a>
+  <a href="bengal.html">Bengal</a>
+  <a href="bihar.html">Bihar</a>
+  <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Discover the Spirit of Gujarat</h2>
+      <p>From the White Rann to vibrant cities and ancient temples, Gujarat is full of wonders.</p>
+    </div>
+  </div>
+
+  <h2>Top 12 Tourist Places in Gujarat</h2>
+  <div class="card-container">
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Gir_lion-Gir_forest%2Cjunagadh%2Cgujarat%2Cindia.jpeg/568px-Gir_lion-Gir_forest%2Cjunagadh%2Cgujarat%2Cindia.jpeg"><div class="card-content"><h3>Gir National Park</h3><p>Home to the majestic Asiatic lions, a wildlife lover’s paradise.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Somanath_mandir_%28cropped%29.jpg/500px-Somanath_mandir_%28cropped%29.jpg"><div class="card-content"><h3>Somnath Temple</h3><p>One of the 12 Jyotirlinga shrines of Lord Shiva.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Dwaraka.jpg/960px-Dwaraka.jpg"><div class="card-content"><h3>Dwarka</h3><p>Ancient city associated with Lord Krishna.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Rann_of_Kutch_-_White_Desert.jpg/960px-Rann_of_Kutch_-_White_Desert.jpg"><div class="card-content"><h3>Rann of Kutch</h3><p>Salt desert famous for Rann Utsav festival.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Lake_Saputara.jpg/500px-Lake_Saputara.jpg"><div class="card-content"><h3>Saputara</h3><p>Only hill station of Gujarat with cool climate.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Top_of_Pavadagh_hill.JPG/120px-Top_of_Pavadagh_hill.JPG"><div class="card-content"><h3>Champaner-Pavagadh</h3><p>UNESCO World Heritage site with forts and temples.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Atal_Pedestrian_Bridge_at_Night.jpg/330px-Atal_Pedestrian_Bridge_at_Night.jpg"><div class="card-content"><h3>Ahmedabad Heritage City</h3><p>India's first UNESCO World Heritage City.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Surya_mandhir.jpg/500px-Surya_mandhir.jpg"><div class="card-content"><h3>Modhera Sun Temple</h3><p>Stunning temple dedicated to the Sun God.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Monuments_of_Diu_%28City%29.jpg/500px-Monuments_of_Diu_%28City%29.jpg"><div class="card-content"><h3>Diu</h3><p>Coastal town with beaches and Portuguese forts.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Janugadh_Musuem.jpg/330px-Janugadh_Musuem.jpg"><div class="card-content"><h3>Junagadh</h3><p>Historical city with forts and caves.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Mandvi_Beach.jpg/500px-Mandvi_Beach.jpg"><div class="card-content"><h3>Mandvi Beach</h3><p>Serene beach perfect for relaxation.</p></div></div>
+    <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Palitana.jpg"><div class="card-content"><h3>Palitana Temples</h3><p>World’s largest temple complex.</p></div></div>
+  </div>
+</section>
+
+<section class="culture-section">
+  <h2>Culture of Gujarat</h2>
+  <p>Gujarat has a rich cultural heritage with colorful festivals like Navratri, traditional folk dances such as Garba and Dandiya, and unique crafts like Patola sarees and Bandhani.</p>
+</section>
+
+<section>
+  <h2>Wedding Style</h2>
+  <p>Gujarat weddings are vibrant, with rituals like Garba nights, colorful attire, and grand feasts featuring Gujarati thalis.</p>
+</section>
+
+<section>
+  <h2>Major Crops</h2>
+  <ul>
+    <li>Cotton</li>
+    <li>Groundnut</li>
+    <li>Wheat</li>
+    <li>Millet</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Explore India | Gujarat Tourism Project</p>
+  <p>Designed with ❤️ for culture lovers</p>
+</footer>
+
+</body>
+</html>

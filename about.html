@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Explore India</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #e25822;
+            --color-primary-light: #ff7f50;
+            --color-primary-dark: #c3410f;
+            --color-secondary: #1e90ff;
+            --color-accent: #ffd700;
+            --color-text: #2c3e50;
+            --color-text-light: #7f8c8d;
+            --color-bg-overlay: rgba(0, 0, 0, 0.6);
+            --color-footer-dark-1: #1a1a2e;
+            --color-footer-dark-2: #16213e;
+            --color-footer-text: #ddd;
+            --color-footer-link-hover: #ff7f50;
+            --color-white: #fff;
+            --color-light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-text);
+            background-color: var(--color-light-bg);
+            padding-top: 80px;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            padding: 8px 15px !important;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link:focus {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .dropdown-menu {
+            background-color: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--color-primary);
+            color: white;
+            padding-left: 25px;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, rgba(226, 88, 34, 0.8), rgba(30, 144, 255, 0.8)), url('https://images.unsplash.com/photo-1532664189809-02133fee698d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0 60px;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--color-accent);
+            border-radius: 2px;
+        }
+        
+        .section-title.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Section */
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .mission-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--color-primary);
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+        
+        .mission-card i {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Team Section */
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-card:hover .team-img img {
+            transform: scale(1.1);
+        }
+        
+        .team-content {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .team-content h4 {
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        .team-content p {
+            color: var(--color-text-light);
+            margin-bottom: 15px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .team-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--color-light-bg);
+            border-radius: 50%;
+            color: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .team-social a:hover {
+            background: var(--color-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 30px 0;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--color-accent);
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-footer-dark-1), var(--color-footer-dark-2));
+            color: var(--color-footer-text);
+            padding-top: 60px;
+            margin-top: 40px;
+        }
+        
+        .footer-section h5 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--color-primary);
+            border-radius: 2px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--color-footer-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-primary-light);
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--color-primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            margin-top: 40px;
+            padding: 20px 0;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-header {
+                padding: 80px 0 40px;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-map-marked-alt me-2"></i>Explore India
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client.html"><i class="fas fa-user me-1"></i> Account</a>
+                    </li>
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe-asia me-1"></i> States
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="goa.html"><i class="fas fa-umbrella-beach me-2"></i> Goa</a></li>
+                            <li><a class="dropdown-item" href="rajasthan.html"><i class="fas fa-monument me-2"></i> Rajasthan</a></li>
+                            <li><a class="dropdown-item" href="hp.html"><i class="fas fa-mountain me-2"></i> Himachal Pradesh</a></li>
+                            <li><a class="dropdown-item" href="bihar.html"><i class="fas fa-map-marked-alt me-2"></i> Bihar</a></li>
+                            <li><a class="dropdown-item" href="gujarat.html"><i class="fas fa-industry me-2"></i> Gujarat</a></li>
+                            <li><a class="dropdown-item" href="uttarpradesh.html"><i class="fas fa-landmark me-2"></i> Uttar Pradesh</a></li>
+                            <li><a class="dropdown-item" href="punjab.html"><i class="fas fa-tractor me-2"></i> Punjab</a></li>
+                            <li><a class="dropdown-item" href="kerala.html"><i class="fas fa-umbrella-beach me-2"></i> Kerala</a></li>
+                            <li><a class="dropdown-item" href="tamilnadu.html"><i class="fas fa-temple me-2"></i> Tamil Nadu</a></li>
+                            <li><a class="dropdown-item" href="bengal.html"><i class="fas fa-feather-alt me-2"></i> Bengal</a></li>
+                            <li><a class="dropdown-item" href="maharashtra.html"><i class="fas fa-city me-2"></i> Maharashtra</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>About Explore India</h1>
+            <p>Discover the story behind our mission to showcase the incredible diversity and beauty of India</p>
+        </div>
+    </div>
+
+    <!-- About Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title">Our Story</h2>
+                    <div class="about-content">
+                        <p>Founded in 2025, Explore India was born from a passion for sharing the incredible diversity and beauty of our country with travelers from around the world. What started as a small blog has grown into a comprehensive travel platform dedicated to showcasing the rich tapestry of Indian culture, heritage, and natural wonders.</p>
+                        
+                        <p>Our team of travel enthusiasts, writers, and photographers have journeyed across every corner of India, from the snow-capped peaks of the Himalayas to the tropical beaches of the Andaman Islands. We've experienced firsthand the warmth of Indian hospitality and the depth of its cultural heritage.</p>
+                        
+                        <p>Today, Explore India serves as a trusted resource for millions of travelers each year, providing detailed guides, authentic experiences, and practical advice to help visitors discover the real India beyond the tourist trails.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Team" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Our Mission & Values</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="mission-card">
+                        <i class="fas fa-compass"></i>
+                        <h3>Authentic Experiences</h3>
+                        <p>We believe in showcasing the real India - beyond the tourist hotspots. Our guides focus on authentic cultural experiences that connect travelers with local communities.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mission-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Sustainable Tourism</h3>
+                        <p>We're committed to promoting responsible travel that benefits local communities and preserves India's natural and cultural heritage for future generations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="mission-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Cultural Exchange</h3>
+                        <p>We strive to foster meaningful connections between travelers and locals, creating opportunities for cultural exchange and mutual understanding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Destinations Covered</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">100K+</div>
+                        <div class="stat-text">Happy Travelers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-text">States Explored</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-text">Years of Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Meet Me</h2>
+            <p class="text-center mb-5">Passionate travelers and experts dedicated to sharing India's wonders</p>
+            
+            <div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-img" style="height:auto;">
+                            <img src="WhatsApp Image 2025-09-20 at 01.25.39 copy.jpeg" alt="SUSHANT PATHAK">
+                        </div>
+                        <div class="team-content">
+                            <h4>SUSHANT PATHAK</h4>
+                            <p>Founder & CEO</p>
+                            <p>With over 5 years of travel experience across India, Rajesh's passion for showcasing India's diversity drives our mission.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Explore India</h5>
+                        <p>Your ultimate travel companion, guiding you through India's breathtaking landscapes, diverse culture, and historic landmarks.</p>
+                        <div class="social-icons mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="home.html"><i class="fas fa-angle-right me-2"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a></li>
+                            <li><a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> Travel Guides</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Popular States</h5>
+                        <ul class="footer-links">
+                            <li><a href="rajasthan.html"><i class="fas fa-angle-right me-2"></i> Rajasthan</a></li>
+                            <li><a href="goa.html"><i class="fas fa-angle-right me-2"></i> Goa</a></li>
+                            <li><a href="kerala.html"><i class="fas fa-angle-right me-2"></i> Kerala</a></li>
+                            <li><a href="hp.html"><i class="fas fa-angle-right me-2"></i> Himachal Pradesh</a></li>
+                            <li><a href="uttarpradesh.html"><i class="fas fa-angle-right me-2"></i> Uttar Pradesh</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-section">
+                        <h5>Contact Us</h5>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-envelope me-2"></i> sushantpathak2028@gmail.com</li>
+                            <li><i class="fas fa-phone me-2"></i> +91 70507 94068</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Rajkot, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="mb-0">© 2025 Explore India Project | Designed by Sushant Pathak</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

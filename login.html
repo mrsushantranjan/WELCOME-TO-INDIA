@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            max-width: 380px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 24px 0 rgba(0,0,0,0.08);
+        }
+        .login-card .form-control:focus {
+            box-shadow: 0 0 0 2px #0d6efd33;
+        }
+    </style>
+</head>
+<body>
+    <div class="card login-card p-4">
+        <div class="text-center mb-3">
+            <img src="https://img.icons8.com/nolan/1200/map-marker.jpg" alt="Explore India Logo" style="height:70px;width:90px;" class="mb-2"><br>
+            <i class="bi bi-person-circle fs-1 text-primary"></i>
+            <h3 class="mt-2 mb-0">Explore India Admin Login</h3>
+            <small class="text-muted">Admin Panel</small>
+         
+        </div>
+        <form id="adminLoginForm" autocomplete="off">
+            <div class="mb-3">
+                <label for="adminUsername" class="form-label">Username</label>
+                <input type="text" class="form-control" id="adminUsername"  required autofocus>
+            </div>
+            <div class="mb-3">
+                <label for="adminPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="adminPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <div id="loginError" class="text-danger mt-2" style="display:none;">Invalid credentials</div>
+        </form>
+    </div>
+    <script>
+    // Simple demo login: username: admin, password: admin123
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var user = document.getElementById('adminUsername').value.trim();
+        var pass = document.getElementById('adminPassword').value.trim();
+        if (user === 'admin' && pass === 'admin123') {
+            window.location.href = 'admin.html';
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+        }
+    });
+    </script>
+</body>
+</html>

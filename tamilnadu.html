@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu - Explore India</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f5;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #5C5C5C, #800000);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            margin: 10px 0 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        nav {
+            background-color: #800000;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #FFDAB9;
+        }
+        section {
+            padding: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #800000;
+            border-bottom: 3px solid #5C5C5C;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #800000;
+        }
+        .card-content {
+            padding: 18px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #800000;
+        }
+        .card-content p {
+            line-height: 1.5;
+            color: #444;
+        }
+        footer {
+            background-color: #5C5C5C;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        ul {
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .culture-section {
+            background-color: #f5f0e6;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .culture-section p {
+            line-height: 1.6;
+        }
+        .banner {
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1598422306154-6c7d2bfb7913?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 12px;
+            position: relative;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+        }
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .banner-content h2 {
+            color: white;
+            border-bottom: none;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .banner-content p {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 5px;
+            }
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Tamil Nadu</h1>
+    <p>Land of Temples, Traditions, and Timeless Culture</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="rajasthan.html">Rajasthan</a>
+    <a href="kerala.html">Kerala</a>
+    <a href="goa.html">Goa</a>
+    <a href="gujarat.html">Gujarat</a>
+    <a href="punjab.html">Punjab</a>
+    <a href="uttarpradesh.html">Uttar Pradesh</a>
+    <a href="hp.html">Himachal Pradesh</a>
+    <a href="kerala.html">Kerala</a>
+    <a href="bengal.html">Bengal</a>
+    <a href="bihar.html">Bihar</a>
+    <a href="maharastra.html">Maharashtra</a>
+</nav>
+
+<section>
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Discover the Rich Heritage of Tamil Nadu</h2>
+            <p>From ancient temples to pristine beaches, experience the diversity of South India</p>
+        </div>
+    </div>
+    
+    <h2>Top 12 Tourist Places in Tamil Nadu</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg/500px-An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg" alt="Meenakshi Amman Temple">
+            <div class="card-content">
+                <h3>Meenakshi Amman Temple</h3>
+                <p>Famous Dravidian-style temple in Madurai dedicated to Goddess Meenakshi.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chennai_-_bird%27s-eye_view.jpg/960px-Chennai_-_bird%27s-eye_view.jpg" alt="Marina Beach">
+            <div class="card-content">
+                <h3>Marina Beach</h3>
+                <p>Longest urban beach in India, located in Chennai.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Pykara_Falls_%2816473434961%29.jpg/500px-Pykara_Falls_%2816473434961%29.jpg" alt="Ooty">
+            <div class="card-content">
+                <h3>Ooty</h3>
+                <p>Hill station known for tea gardens, lakes, and cool weather.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Boating_in_Kodaikanal_Lake_with_Mist.jpg/330px-Boating_in_Kodaikanal_Lake_with_Mist.jpg" alt="Kodaikanal">
+            <div class="card-content">
+                <h3>Kodaikanal</h3>
+                <p>Beautiful hill town with a star-shaped lake and misty valleys.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Brihadeeswarar_Temple_at_Night.jpg/500px-Brihadeeswarar_Temple_at_Night.jpg" alt="Brihadeeswarar Temple">
+            <div class="card-content">
+                <h3>Brihadeeswarar Temple</h3>
+                <p>UNESCO site built by Raja Raja Chola in Thanjavur.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg/500px-Shore_Temple_-Mamallapuram_-Tamil_Nadu_-N-TN-C55.jpg" alt="Shore Temple">
+            <div class="card-content">
+                <h3>Shore Temple</h3>
+                <p>7th-century temple on the Bay of Bengal coast at Mahabalipuram.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Rameswaram_montage_image.jpg/500px-Rameswaram_montage_image.jpg" alt="Rameswaram">
+            <div class="card-content">
+                <h3>Rameswaram</h3>
+                <p>Sacred island town with long temple corridors and beaches.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Yercaud_lake.jpg/500px-Yercaud_lake.jpg" alt="Yercaud">
+            <div class="card-content">
+                <h3>Yercaud</h3>
+                <p>Quiet hill station surrounded by coffee plantations.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Vivekananda_Rock_Memorial%2C_Kanyakumari.jpg/500px-Vivekananda_Rock_Memorial%2C_Kanyakumari.jpg" alt="Kanyakumari">
+            <div class="card-content">
+                <h3>Kanyakumari</h3>
+                <p>Southernmost tip of India where three seas meet.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Tiger_Drinking_Pond_Mudumalai_Mar21_DSC01310.jpg/960px-Tiger_Drinking_Pond_Mudumalai_Mar21_DSC01310.jpg" alt="Mudumalai Tiger Reserve">
+            <div class="card-content">
+                <h3>Mudumalai Tiger Reserve</h3>
+                <p>Wildlife sanctuary home to tigers, elephants, and deer.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Main_Falls_From_Thalavai_House_Hotel.jpg/500px-Main_Falls_From_Thalavai_House_Hotel.jpg" alt="Courtallam Falls">
+            <div class="card-content">
+                <h3>Courtallam Falls</h3>
+                <p>Popular waterfalls known as the 'Spa of South India'.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ranganathaswamy_temple_tiruchirappalli.jpg/640px-Ranganathaswamy_temple_tiruchirappalli.jpg" alt="Srirangam Temple">
+            <div class="card-content">
+                <h3>Srirangam Temple</h3>
+                <p>Largest functioning Hindu temple complex in the world.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="culture-section">
+    <h2>Culture of Tamil Nadu</h2>
+    <p>Tamil Nadu is known for Bharatanatyam dance, Carnatic music, temple festivals, and Pongal celebrations. Its culture is deeply rooted in Tamil literature and traditions that date back over two thousand years. The state is famous for its classical arts, traditional silk sarees, and elaborate temple architecture.</p>
+</section>
+
+<section>
+    <h2>Wedding Style</h2>
+    <p>Weddings feature Kanchipuram silk sarees, veshti, gold jewelry, jasmine flowers, and traditional nadaswaram music. Tamil weddings are known for their vibrant rituals, including the Nicchyathartham (engagement), Mangala Snaanam (holy bath), and Kanyadaanam (giving away the bride).</p>
+</section>
+
+<section>
+    <h2>Major Crops</h2>
+    <ul>
+        <li><strong>Rice</strong> - The staple food and primary crop</li>
+        <li><strong>Sugarcane</strong> - Widely cultivated for sugar production</li>
+        <li><strong>Cotton</strong> - Important for textile industry</li>
+        <li><strong>Bananas</strong> - Tamil Nadu is a leading producer</li>
+        <li><strong>Coconut</strong> - Grown extensively in coastal regions</li>
+        <li><strong>Tea and Coffee</strong> - Plantations in hill stations</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2025 Explore India | Tamil Nadu Tourism Project</p>
+    <p>Designed with ❤️ for culture enthusiasts</p>
+</footer>
+
+</body>
+</html>
